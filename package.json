@@ -1,0 +1,32 @@
+{
+  "name": "Room-Go-Button",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "verify": "npm run lint",
+    "lint": "eslint .",
+    "start": "node index.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "debounce": "^1.0.2",
+    "dotenv": "^4.0.0",
+    "onoff": "^1.1.2",
+    "twilio": "^3.3.0",
+    "wiring-pi": "^2.2.1"
+  }
+}
