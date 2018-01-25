@@ -1,13 +1,16 @@
+require('dotenv').config();
 var Gpio = require('onoff').Gpio;
 var twilio = require('twilio');
 var debounce = require('debounce');
 var button = new Gpio(18, 'in', 'falling');
 
-const ACCOUNT_SID = "AC27da05dc90ddba09205ec309d13fbf8e";
-const AUTH_TOKEN = "c9a66fa30dd52452d15ad3178faa8a92";
-const FROM_PHONE_NUMBER = "+17276148649";
-const TO_PHONE_NUMBER_ONE = "+17279024583";
-const TO_PHONE_NUMBER_TWO = "+17276887576";
+const { 
+	ACCOUNT_SID,
+	AUTH_TOKEN,
+	FROM_PHONE_NUMBER,
+	TO_PHONE_NUMBER_ONE,
+	TO_PHONE_NUMBER_TWO
+	} = process.env;
 const UNOCCUPIED_MESSAGE = "The room is unoccupied!";
 const OCCUPIED_MESSAGE = "The room is occupied";
 const SECONDS_DELAY = 30;
